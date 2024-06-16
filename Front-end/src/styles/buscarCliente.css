@@ -1,0 +1,20 @@
+.bg-white-important {
+    background-color: #ffffff !important;
+}
+
+.tabela__inicial__buscarCliente {
+    position: relative;
+    left: 12px; /* ou ajuste conforme necessário */
+}
+
+.hidden {
+    display: none;
+}
+
+.bgDark{
+    background-color: rgb(223, 223, 223);
+}
+
+.bg-none{
+    background-color: rgb(223, 223, 223);
+}

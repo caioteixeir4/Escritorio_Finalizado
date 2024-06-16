@@ -1,0 +1,19 @@
+.footer__todos{
+    font-size: 1rem;
+    background-color: #D9D9D9 !important;
+    text-decoration: none !important;
+    width: 100%;
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 12px 0;
+    position: absolute;
+    bottom: 0;
+}
+
+body {
+    position: relative;
+    min-height: 100vh;
+    margin: 0;
+    padding-bottom: 168px; /* Ajuste conforme a altura do footer */
+}
+

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Cliente</title>
+    <link rel="stylesheet" href="./src/styles/reset.css">
+
+    <link rel="stylesheet" href="./src/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
+    <link rel="stylesheet" href="./src/styles/root.css">
+    <link rel="stylesheet" href="./src/styles/header.css">
+    <link rel="stylesheet" href="./src/styles/buscarCliente.css">
+    <link rel="stylesheet" href="./src/styles/footer.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!-- Substitua o texto "Navbar" pela sua imagem -->
+                <a class="navbar-brand" href="./index.html">
+                    <img src="./src/asserts/img/Logo.png" alt="Logo" height="30">
+                </a>
+                <!-- Botão de toggler para dispositivos móveis -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body w-100 h-100 p-0 m-0">
+                          <div class="row p-0 m-0">
+                            <!-- Parte 1 -->
+                            <div class="col-md-6 bgDark">
+                              <div class="form-group">
+                                <label for="nomeCliente">Nome</label>
+                                <input type="text" class="form-control bg-none" id="nomeCliente" name="nomeCliente" disabled>
+                              </div>
+                              <div class="form-group">
+                                <label for="cpfCliente">CPF</label>
+                                <input type="text" class="form-control bg-none" id="cpfCliente" name="cpfCliente" disabled>
+                              </div>
+                              <div class="form-group">
+                                <label for="rgCliente">RG</label>
+                                <input type="text" class="form-control bg-none" id="rgCliente" name="rgCliente" disabled>
+                              </div>
+                              <div class="form-group">
+                                <label for="celularCliente">Celular</label>
+                                <input type="text" class="form-control bg-none" id="celularCliente" name="celularCliente" disabled>
+                              </div>
+                            </div>
+                            <!-- Fim Parte 1 -->
+                  
+                            <!-- Parte 2 -->
+                            <div class="col-md-6">
+                                <select class="form-control" id="selectPropriedade">
+                                    <option>Selecione...</option>
+                                  </select>
+                              <div class="form-group">
+                                <label for="nomePropriedade">Nome</label>
+                                <input type="text" class="form-control" id="nomePropriedade" name="nomePropriedade" disabled>
+                              </div>
+                              <div class="form-group">
+                                <label for="cnpjPropriedade">CNPJ</label>
+                                <input type="text" class="form-control" id="cnpjPropriedade" name="cnpjPropriedade" disabled>
+                              </div>
+                              <div class="form-group">
+                                <label for="incricaoPropriedade">Inscrição Estadual</label>
+                                <input type="text" class="form-control" id="incricaoPropriedade" name="incricaoPropriedade" disabled>
+                              </div>
+                              <div class="form-group">
+                                <label for="statusPropriedade">Status</label>
+                                <input type="text" class="form-control" id="statusPropriedade" name="statusPropriedade" disabled>
+                              </div>
+                              <div class="form-group">
+                                <label for="numPastaPropriedade">Número da Pasta</label>
+                                <input type="text" class="form-control" id="numPastaPropriedade" name="numPastaPropriedade" disabled>
+                              </div>
+                            </div>
+                            <!-- Fim Parte 2 -->
+                  
+                          </div>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                          <button type="button" id="excluir" class="btn btn-secondary">Excluir</button>
+                          <button type="button" id="excluirCliente" class="btn btn-secondary">Excluir Cliente</button>
+                          <button type="button" id="permitirAlterar" class="btn btn-primary">Alterar</button>
+                          <button type="button" id="alterar" class="btn btn-primary">Confirmar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  
+
+                <!-- Itens do Navbar -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./buscarCliente.html">Buscar cliente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cadastroCliente.html">Cadastro de cliente</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cadastroPropiedades.html">Cadastro de Propiedades</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./cadastroRecibo.html">Cadastro de Recibos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="header__Linha"></div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <!--Titulo-->
+            <h1 class="display-4 espaco">Buscar Cliente</h1>
+
+            <!--area de busca-->
+            <div class="row">
+                <div class="col-md-3 mb-3">
+                    <nav class="navbar bg-body-tertiary bg-white-important">
+                        <form class="container-fluid">
+                            <div class="input-group">
+                                <span class="input-group-text" id="basic-addon1">
+                                    <i class="fas fa-search"></i>
+                                </span>
+                                <input type="text" class="form-control" placeholder="Busca..." aria-label="Username" aria-describedby="basic-addon1">
+                            </div>
+                        </form>
+                    </nav>        
+                </div>
+            </div>
+        
+            <div class="row">
+                <div class="col-md-12">
+                    <!--area para quando não tem registro-->
+                    <h2 class="display-4 espaco" style="display: none;">Sem registro!</h2>
+
+                    <!--inicio da tabela com os clientes-->
+                    <table class="tabela__inicial__buscarCliente table table-striped table-bordered">
+                        <thead>
+                            <tr>
+
+                                <!--titulo da tabela-->
+                                <th scope="col" >Id</th>
+                                <th scope="col" >Clientes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            <!--aqui onde os clientes serão salvos-->
+                            
+                        </tbody>
+                    </table>                        
+                </div>
+            </div>    
+        </div>
+    </main>
+
+    <footer class="footer__todos">
+        <section>
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Suporte</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Aviso de privacidade</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Termos de uso</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">© Todos os direitos reservados a ESCRITORIO CONTABIL J L C</a>
+                  </li>
+            </ul>
+            <!-- Modal -->
+            <div class="modal fade" id="supportModal" tabindex="-1" aria-labelledby="supportModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="supportModalLabel">Suporte</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Aqui você pode colocar o conteúdo do modal de suporte.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    
+    <script src="./src/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="./src/script/main.js"></script>
+    <script src="./src/script/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>

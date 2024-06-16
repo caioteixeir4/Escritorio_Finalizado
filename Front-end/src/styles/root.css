@@ -1,0 +1,24 @@
+body{
+    background-color: #ffffff;
+    height: auto;
+}
+.espaco{
+    padding-left: 12px;
+}
+:root{
+    --cor-principal: #000000;
+    --cor-secundaria: #D9D9D9;
+    --cor-terciaria: #ffffff;
+    --cor-quaternaria: #2A2A8A;
+    --cor-quintario: #C7E9FF;
+    --body-color:#FFFCFF ;
+    --header-color:#d36c6c;
+    --header-button:#92a1d1;
+    --color-weekdays: #247BA0; 
+    --box-shadow: #CBD4C2;
+    --hover: #e8faed;
+    --current-day:#e8f4fa;
+    --event-color: #58bae4;
+    --modal-event: #e8f4fa;
+    --color-day:white;
+}
